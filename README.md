@@ -36,3 +36,7 @@ When converting Unicode to UTF-8:
 | `SetConsoleOutputCP(CP_UTF8)`       | Ensures the console uses the UTF-8 character encoding for output. This is specific to Windows systems. |
 | `std::vector<std::string> unicodeArray` | Holds an array of Unicode code points, which are processed in the program. The default values include several emoji characters. |
 | `std::cout << ...`                  | Prints out the original Unicode code point and the corresponding UTF-8 escape sequence for each value in the array. |
+
+
+## License
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
