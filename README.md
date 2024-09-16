@@ -25,3 +25,14 @@ When converting Unicode to UTF-8:
 - Characters from `U+0080` to `U+07FF` use 2 bytes.
 - Characters from `U+0800` to `U+FFFF` use 3 bytes.
 - Characters from `U+10000` to `U+10FFFF` use 4 bytes.
+
+
+## Code Explanation
+
+| Code Component                     | Explanation |
+|-------------------------------------|-------------|
+| `unicodeToUTF8(const std::string&)` | Converts a single Unicode code point to its UTF-8 hexadecimal escape sequence. It first converts the hexadecimal Unicode string to an integer, then generates the corresponding UTF-8 bytes based on the value of the code point. |
+| `processUnicodeArray(const std::vector<std::string>&)` | This function takes a vector of Unicode code points as input and returns a vector of UTF-8 hexadecimal escape sequences for each code point by calling `unicodeToUTF8`. |
+| `SetConsoleOutputCP(CP_UTF8)`       | Ensures the console uses the UTF-8 character encoding for output. This is specific to Windows systems. |
+| `std::vector<std::string> unicodeArray` | Holds an array of Unicode code points, which are processed in the program. The default values include several emoji characters. |
+| `std::cout << ...`                  | Prints out the original Unicode code point and the corresponding UTF-8 escape sequence for each value in the array. |
