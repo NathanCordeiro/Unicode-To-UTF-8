@@ -18,3 +18,10 @@ Unicode is a standard designed to represent text from all the world's writing sy
 
 ### UTF-8
 UTF-8 is a variable-length character encoding used for encoding Unicode characters. It uses 1 to 4 bytes to represent characters, depending on the code point. UTF-8 is widely used because of its backward compatibility with ASCII and efficiency in encoding.
+
+### Conversion Process
+When converting Unicode to UTF-8:
+- Characters from `U+0000` to `U+007F` use 1 byte.
+- Characters from `U+0080` to `U+07FF` use 2 bytes.
+- Characters from `U+0800` to `U+FFFF` use 3 bytes.
+- Characters from `U+10000` to `U+10FFFF` use 4 bytes.
